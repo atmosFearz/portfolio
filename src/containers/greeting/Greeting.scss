@@ -1,0 +1,109 @@
+@import "../../_globalColor";
+
+.greet-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 2rem auto;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.greeting-main > * {
+  flex: 1;
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+.greeting-text {
+  font-size: 70px;
+  line-height: 1.1;
+  color: $textColor !important;
+}
+
+.greeting-text-p {
+  font-size: 22px;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+/* ✅ Bullet styling */
+.greeting-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+.greeting-bullets li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 26px;
+}
+
+.greeting-bullets li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: $textColor;
+}
+
+/* Buttons */
+.button-greeting-div {
+  display: flex;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+/* Image */
+.greeting-image-div img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Wave animation */
+.wave-emoji {
+  animation: wave 1.8s infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .greeting-main {
+    display: block;
+    text-align: center;
+  }
+
+  .greeting-text {
+    font-size: 32px;
+  }
+
+  .greeting-text-p {
+    font-size: 16px;
+  }
+
+  .greeting-bullets li {
+    padding-left: 0;
+  }
+
+  .greeting-bullets li::before {
+    display: none;
+  }
+
+  .button-greeting-div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
